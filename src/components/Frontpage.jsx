@@ -10,7 +10,7 @@ export default function Frontpage(props){
                 Some description if needed
             </p>
             <button 
-                onClick={()=> props.setSite(true)}
+                onClick={()=> props.setSite(1)}
                 className="app-start-button">
                 Start quiz
             </button>

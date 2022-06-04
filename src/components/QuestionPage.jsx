@@ -95,7 +95,7 @@ export default function QuestionPage({questions, setSite}){
                 <button 
                 className="app-check-button"
                 onClick={() =>{
-                    setSite(false)
+                    setSite(0)
                     setCheckAnswers(false)
                     setRightAnswers(0)
                 }}
