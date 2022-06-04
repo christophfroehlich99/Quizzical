@@ -68,8 +68,9 @@ export default function QuestionPage({questions, setSite}){
     modifiedQuestions.forEach(question => {
       const {answersData} = question.questionContent.answers 
       let selectedAnswer =answersData.find(answer => answer.isHeld)
-      console.log(selectedAnswer)
-      if (selectedAnswer.text === question.questionContent.correct_answer){
+      if (selectedAnswer === undefined){
+      }
+      else if (selectedAnswer.text === question.questionContent.correct_answer){
         console.log("ran2")
         setRightAnswers(prevRightAnswers => prevRightAnswers + 1)
         control++
@@ -90,12 +91,12 @@ export default function QuestionPage({questions, setSite}){
             {checkAnswers ? 
                 <div className="play-again-score-wrapper">
                 <h2 className="score">
-                    You scored {rightAnswers}/{questions.length} correct answers
+                    {rightAnswers}/{questions.length} correct answers
                 </h2> 
                 <button 
-                className="app-check-button"
+                className="app-play-again-button"
                 onClick={() =>{
-                    setSite(0)
+                    setSite(1)
                     setCheckAnswers(false)
                     setRightAnswers(0)
                 }}

@@ -26,7 +26,7 @@
   color: #293264;
 }
 
-.app-start-button, .app-check-button{
+.app-start-button, .app-check-button,.app-play-again-button{
   background: #4D5B9E;
   color: white;
   border-radius: 1.55rem;
@@ -40,8 +40,11 @@
   cursor: pointer;
   transition: box-shadow 100ms;
 }
-
 .app-check-button{
+  letter-spacing: 0.01rem;
+  font-size: 1.675rem;
+}
+.app-play-again-button{
   margin:0 0 0 2rem;
 }
 .app-start-button:active, .app-check-button:active{
@@ -141,4 +144,24 @@
   font-size: 1.6rem;
   font-weight: 700;
   color: #293264;
+}
+
+
+@media only screen and (max-width: 768px){
+  .question-button, .question-button-held, .question-button-correct,
+  .question-button-incorrect, .question-button-fade {
+    width: 100%;
+  }
+
+  .question {
+    letter-spacing:-0.05em ;
+  }
+
+  .app-play-again-button{
+    font-size: 1.3rem;
+  }
+
+  .score {
+    font-size: 1.3rem;
+  }
 }

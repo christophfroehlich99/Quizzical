@@ -8,22 +8,18 @@ import FormPage from "./components/FormPage"
 export default function App() {
   const [site, setSite] = React.useState(0)
   const [questions, setQuestion] = React.useState([])
-
-  // React.useEffect(() => {
-  //   fetch("https://opentdb.com/api.php?amount=5&type=multiple")
-  //   .then(res => res.json())
-  //   .then(questions => setQuestion(questions.results))
-  // },[site])
-
-
-  async function initQuestions() {
-    const res = await fetch(`https://opentdb.com/api.php?amount=5&type=multiple`)
+  const [loading, setLoading] = React.useState(false)
+console.log(site)
+ 
+  async function initQuestions(api) {
+    setLoading(true)
+    const res = await fetch(api)
     const data = await res.json()
     setQuestion(data.results)    
     setSite(2)
+    setLoading(false)
 }
   
-
   return (
     <div>
       {site === 0 &&
@@ -34,6 +30,7 @@ export default function App() {
       {site === 1 &&
         <FormPage
         initQuestions={initQuestions}
+        loading={loading}
       />
       }
 
