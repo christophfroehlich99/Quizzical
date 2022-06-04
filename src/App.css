@@ -1,0 +1,144 @@
+
+.app-start{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 90vh;
+  width:80vw;
+}
+
+.app-name{
+  font-size: 3.625rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-align: center;
+  color: #293264;
+  margin-bottom:2.5rem;
+}
+
+.app-description{
+  font-family: Inter;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.15rem;
+  text-align: center;
+  color: #293264;
+}
+
+.app-start-button, .app-check-button{
+  background: #4D5B9E;
+  color: white;
+  border-radius: 1.55rem;
+  border-style: none;
+  width: 15rem;
+  height: 4.375rem;
+  margin-top: 2.5rem;
+  font-size: 1.875rem;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  cursor: pointer;
+  transition: box-shadow 100ms;
+}
+
+.app-check-button{
+  margin:0 0 0 2rem;
+}
+.app-start-button:active, .app-check-button:active{
+  box-shadow: inset 3px 3px 10px 3px rgba(0, 0, 0, 0.7);
+}
+
+.question-page{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  height: 90vh;
+  width:80vw;
+  max-width: 60rem;
+}
+
+.question-container, .button-container{
+  width: 100%;
+  box-shadow: 0 4px 3px -3px lightgray;
+  padding-bottom: 23px;
+}
+
+.button-container{
+  display: flex;
+  padding: 2rem;
+  justify-content: center;
+  align-items: center;
+  box-shadow: none;
+}
+.question {
+  color: #293264;
+  font-family: Karla;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.question-button, .question-button-held, .question-button-correct,
+.question-button-incorrect, .question-button-fade {
+  padding:0.25rem 0.5rem;
+  border-radius: 1rem;
+  border-style: none;
+  min-width: 4.38rem;
+  min-height: 2rem;
+  margin: 0 1rem 1.25rem 0;
+  font-family: Inter;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.question-button {
+  background: #F5F7FB;
+  color: #293264;
+  min-width: 4.38rem;
+  min-height: 2rem;
+  border: 0.8px solid #293264;
+  transition:box-shadow 100ms,
+  
+}
+
+.question-button:active{
+  box-shadow: inset 1px 1px 1px 1px lightgrey;
+}
+
+.question-button-held {
+  background: #D6DBF5;
+  color: #293264;
+}
+
+
+
+.question-button-correct{
+  background: #94D7A2;
+  color: #293264;
+}
+
+
+.question-button-incorrect{
+  background: #F8BCBC;
+  color: #939abf;
+
+}
+
+.question-button-fade{
+  border: 0.8px solid #939abf;
+  color: #939abf;
+}
+
+.play-again-score-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.score {
+  font-family: Inter;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #293264;
+}

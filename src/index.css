@@ -1,0 +1,24 @@
+body , html, #root{
+  margin: 0;
+  font-family: inter;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  background-color: #F5F7FB;
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("./images/blob-blau.png"), url("./images/blob-gelb.png");
+  background-attachment: fixed; 
+  background-repeat: no-repeat;
+  background-size: 25vw;
+  background-position: left bottom, right top;
+
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
